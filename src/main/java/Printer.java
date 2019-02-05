@@ -16,8 +16,8 @@ public class Printer {
     public void print(int pages, int copies){
         int printing = pages * copies;
         if(printing <= this.sheetsLeft && printing <= this.tonerVolume){
-            this.sheetsLeft = this.sheetsLeft - printing;
-            this.tonerVolume = this.tonerVolume - printing;
+          this.sheetsLeft -= printing;
+          this.tonerVolume -= printing;
         }
     }
 
